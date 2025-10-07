@@ -38,9 +38,9 @@ if st.button(label="Pesquisar", use_container_width=True):
         if len(lista_contra_ordenacao_muito_graves) > 0:
             with st.container(border=True):
                 if len(lista_contra_ordenacao_muito_graves) == 1:
-                    st.markdown("**Contra-Ordenação Muito Grave (Artigo 9º)**")
+                    st.markdown("**Contra-Ordenação Muito Grave (Artigo 10º)**")
                 else:
-                    st.markdown("**Contra-Ordenações Muito Graves (Artigo 9º)**")
+                    st.markdown("**Contra-Ordenações Muito Graves (Artigo 10º)**")
                 for ordenacao in lista_contra_ordenacao_muito_graves:
                     ordenacao_negritado = ordenacao.lower().replace(contraordenacao_input.lower(), f"**{contraordenacao_input.lower()}**")
                     st.write(f"{ordenacao_negritado};")
@@ -54,7 +54,7 @@ if st.button(label="Pesquisar", use_container_width=True):
             for ordenacao in contra_ordenacao_graves:
                 st.write(f"{ordenacao};")
         with st.container(border=True):
-            st.markdown("**Contra-Ordenações Muito Graves (Artigo 9º)**")
+            st.markdown("**Contra-Ordenações Muito Graves (Artigo 10º)**")
             for ordenacao in contra_ordenacao_muito_graves:
                 st.write(f"{ordenacao};")
     if len(contraordenacao_input)>0:
@@ -62,6 +62,7 @@ if st.button(label="Pesquisar", use_container_width=True):
             if len(lista_contra_ordenacao_graves)==0:
                 if len(lista_contra_ordenacao_muito_graves)==0:
                     st.info("Resultado não encontrado!")
+
 
 
 
